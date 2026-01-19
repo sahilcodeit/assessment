@@ -1,0 +1,160 @@
+.items-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 24px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.search-box {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 16px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.search-box:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+.results-info {
+  color: #64748b;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.list-container {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.item-row {
+  border-bottom: 1px solid #f1f5f9;
+  background: #fff;
+  transition: background 0.15s;
+}
+
+.item-row:hover {
+  background: #f8fafc;
+}
+
+.item-link {
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+  gap: 16px;
+}
+
+.item-name {
+  flex: 1;
+  font-weight: 500;
+  color: #1e293b;
+}
+
+.item-category {
+  padding: 4px 10px;
+  background: #f1f5f9;
+  border-radius: 4px;
+  font-size: 12px;
+  color: #64748b;
+}
+
+.item-price {
+  font-weight: 600;
+  color: #059669;
+  min-width: 80px;
+  text-align: right;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.pagination button {
+  padding: 8px 16px;
+  border: 1px solid #e2e8f0;
+  background: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.15s;
+}
+
+.pagination button:hover:not(:disabled) {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination .page-info {
+  padding: 8px 16px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.skeleton {
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  gap: 16px;
+}
+
+.skeleton-name {
+  flex: 1;
+  height: 20px;
+  background: linear-gradient(90deg, #f1f5f9 25%, #e2e8f0 50%, #f1f5f9 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 4px;
+}
+
+.skeleton-category {
+  width: 80px;
+  height: 24px;
+  background: linear-gradient(90deg, #f1f5f9 25%, #e2e8f0 50%, #f1f5f9 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 4px;
+}
+
+.skeleton-price {
+  width: 60px;
+  height: 20px;
+  background: linear-gradient(90deg, #f1f5f9 25%, #e2e8f0 50%, #f1f5f9 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 4px;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.empty-state {
+  text-align: center;
+  padding: 48px 24px;
+  color: #64748b;
+}
+
+.empty-state h3 {
+  margin: 0 0 8px;
+  color: #334155;
+}
